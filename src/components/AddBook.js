@@ -12,7 +12,6 @@ function AddBook() {
 
   if (queryStatus.loading) return <p>Loading...</p>;
   if (queryStatus.error) return <p>Error : {queryStatus.error.message}</p>;
-  // console.log(queryStatus.data);
 
   const submitForm = (e) => {
     e.preventDefault();
@@ -33,9 +32,6 @@ function AddBook() {
     } else {
       alert(`Please enter all the info`);
     }
-    // console.log(formData);
-    // console.log(queryStatus);
-    // console.log(mutationStatus);
   };
 
   return (
