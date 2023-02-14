@@ -26,19 +26,56 @@ code {
 }
 
 .book-list {
+  margin: 10px;
   padding: 0;
 }
 
-.book-list .book {
-  display: inline-block;
-  margin: 12px;
-  padding: 10px;
-  border-radius: 4px;
+.booklistul {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 3rem;
+  gap: 10px;
+  align-items: center;
+  justify-items: center;
+  overflow: auto;
+}
+
+.book-item {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 8fr 1fr;
+  justify-items: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
   border: 1px solid #880e4f;
+  border-radius: 4px;
   box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+.book-list .book {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
   cursor: pointer;
   color: #880e4f;
   text-transform: capitalize;
+}
+
+.delete-book {
+  display: block;
+  height: 50%;
+  width: 100%;
+  align-self: start;
+  border-width: 0px;
+  border-color: #880e4f;
+  border-radius: 0px 0px 0px 4px;
+  background: #88305f;
+  color: #fff;
 }
 
 form {

@@ -20,15 +20,6 @@ const GET_AUTHORS = gql`
   }
 `;
 
-const ADD_BOOK_MUTATION = gql`
-  mutation addBook($name: String!, $genre: String!, $authorId: ID!) {
-    addBook(name: $name, genre: $genre, authorId: $authorId) {
-      name
-      id
-    }
-  }
-`;
-
 const GET_SINGLE_BOOK = gql`
   query getSingleBook($id: ID!) {
     book(id: $id) {
@@ -47,4 +38,28 @@ const GET_SINGLE_BOOK = gql`
   }
 `;
 
-export { GET_BOOKS, GET_AUTHORS, ADD_BOOK_MUTATION, GET_SINGLE_BOOK };
+const ADD_BOOK_MUTATION = gql`
+  mutation addBook($name: String!, $genre: String!, $authorId: ID!) {
+    addBook(name: $name, genre: $genre, authorId: $authorId) {
+      name
+      id
+    }
+  }
+`;
+
+const DELETE_SINGLE_BOOK = gql`
+  mutation deleteBook($id: ID!) {
+    deleteBook(id: $id) {
+      id
+      name
+    }
+  }
+`;
+
+export {
+  GET_BOOKS,
+  GET_AUTHORS,
+  ADD_BOOK_MUTATION,
+  GET_SINGLE_BOOK,
+  DELETE_SINGLE_BOOK,
+};
